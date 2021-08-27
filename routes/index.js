@@ -1,10 +1,10 @@
-const router = require('express').Router();
+const hype = require('express').Router();
 const apiRoutes = require('./api');
 
-router.use('/api', apiRoutes);
+hype.use('/api', apiRoutes);
 
-router.use((req, res) => {
+hype.use((req, res) => {
   res.send("<h1>Wrong Route!</h1>")
 });
 
-module.exports = router;
+module.exports = hype;
